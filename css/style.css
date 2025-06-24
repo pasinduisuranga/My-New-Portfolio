@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 :root{
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
@@ -9,6 +11,7 @@
 body{
     line-height: 1.5;
     font-size: 16px;
+    font-family: 'Poppins' sans-serif;
 }
 *{
     margin: 0;
@@ -22,7 +25,9 @@ body{
     box-sizing:border-box;
 }
 
-
+ul{
+    list-style: none;
+}
 
 .section{
     background: var(--bg-black-900);
@@ -36,6 +41,10 @@ body{
     opacity: 1;
 }
 
+ul{
+    list-style: none;
+}
+
 .aside{
     width: 270px;
     background: var(--bg-black-100);
@@ -44,5 +53,29 @@ body{
     top: 0;
     padding: 30px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
+}
+
+.aside .logo{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.aside .logo a{
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.aside .logo a span{
+    font-family: 'Clicker Script',cursive;
+    font-family: 40px;
 }
