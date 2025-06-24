@@ -37,8 +37,12 @@ ul{
     opacity: 1;
 }
 
+.hidden{
+    display: none !important;
+}
+
 .main-content{
-    padding-left: 270px;
+    padding-left: 300px;
 }
 
 .padd-15{
@@ -47,9 +51,48 @@ ul{
 }
 
 .container{
-    max-width: 1100px; /*mula hadaganna one unoth 1100 thibbe*/
+    max-width: 1500px; /*mula hadaganna one unoth 1100 thibbe*/
     width: 100%;
     margin: auto;
+}
+
+.section .container{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title{
+    flex:  0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.section-title h2{
+    font-size: 42px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title h2::before{
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
 }
 
 .row{
@@ -78,7 +121,7 @@ ul{
 }
 
 .aside{
-    width: 270px;
+    width: 300px;
     background: var(--bg-black-100);
     position: fixed;
     left: 0;
@@ -266,7 +309,6 @@ h3.my-profession{
     position: absolute;
     height: 80px;
     width: 80px;
-    background: ;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
     left: -20px;
@@ -277,4 +319,33 @@ h3.my-profession{
     margin: auto;
     border-radius: 5px;
     height: 400px;
+}
+
+/* About */
+
+.about .about-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text{
+    flex: 0 0 100%;
+    max-width: 100;
+}
+
+.about .about-content .about-text h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.about .about-content .about-text h3 span{
+    color: var(--skin-color);
+}
+
+.about .about-content .about-text p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
 }
