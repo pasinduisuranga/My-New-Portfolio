@@ -4,11 +4,17 @@ styleSwitcherToggle.addEventListener("click", () => {
     document.querySelector(".style-switcher").classList.toggle("open");
 });
 
-// Function to set active color theme
-function setActiveStyle(colorTheme) {
-    const alternateStyles = document.querySelectorAll(".alternate-style");
+// Hide style switcher on scroll
+window.addEventListener("scroll", () => {
+    if (document.querySelector(".style-switcher").classList.contains("open")) {
+        document.querySelector(".style-switcher").classList.remove("open");
+    }
+});
+
+const alternateStyles = document.querySelectorAll(".alternate-style");
+function setActiveStyle(color) {
     alternateStyles.forEach((style) => {
-        if (colorTheme === style.getAttribute("title")) {
+        if (color === style.getAttribute("title")) {
             style.removeAttribute("disabled");
         } else {
             style.setAttribute("disabled", "true");
@@ -16,21 +22,19 @@ function setActiveStyle(colorTheme) {
     });
 }
 
-// Day/Night mode toggle functionality
+// Theme light/dark mode toggle
 const dayNight = document.querySelector(".day-night");
 dayNight.addEventListener("click", () => {
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
     document.body.classList.toggle("dark");
+    // Save the theme preference in localStorage
 });
-
-// Check if dark mode was previously set
 window.addEventListener("load", () => {
-    if (document.body.classList.contains("dark")) {
+    if(document.body.classList.contains("dark")) {
         dayNight.querySelector("i").classList.add("fa-sun");
-        dayNight.querySelector("i").classList.remove("fa-moon");
-    } else {
+    }
+    else {
         dayNight.querySelector("i").classList.add("fa-moon");
-        dayNight.querySelector("i").classList.remove("fa-sun");
     }
 });
