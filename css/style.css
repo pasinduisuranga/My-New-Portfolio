@@ -33,7 +33,7 @@ ul{
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    padding: 0 30px;
+    padding: 0 60px;
     opacity: 1;
 }
 
@@ -42,7 +42,7 @@ ul{
 }
 
 .main-content{
-    padding-left: 300px;
+    padding-left: 270px;
 }
 
 .padd-15{
@@ -51,7 +51,7 @@ ul{
 }
 
 .container{
-    max-width: 1500px; /*mula hadaganna one unoth 1100 thibbe*/
+    max-width: 1100px; /*mula hadaganna one unoth 1100 thibbe*/
     width: 100%;
     margin: auto;
 }
@@ -125,7 +125,7 @@ ul{
 }
 
 .aside{
-    width: 300px;
+    width: 270px;
     background: var(--bg-black-100);
     position: fixed;
     left: 0;
@@ -182,12 +182,12 @@ ul{
 }
 
 .aside .nav-toggler{
-    height: 40px;
+    height: 30px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
     cursor: pointer;
     position: fixed;
-    left: 300px;
+    left: 270px;
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
@@ -707,5 +707,53 @@ h3.my-profession{
 .contact .contact-form .btn{
     height: 50px;
     padding: 0 50px;
-    
+
+}
+
+@media(max-width:1199px){
+
+    .aside{
+        left: -270px;
+    }
+    .main-content{
+        padding-left: 0px;
+    }
+    .about .about-content .personal-info .info-item p span{
+        display: block;
+        margin-left: 0;
+    }
+}
+
+@media(max-width:991px){
+
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .home .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img{
+        display: none;
+    }
+}
+
+@media(max-width:767px){
+
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
