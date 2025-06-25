@@ -12,7 +12,7 @@
     transform: translateX(100%);
 }
 
-.style-switcher .open{
+.style-switcher.open{
     transform: translateX(-25px);
 }
 
@@ -62,27 +62,33 @@
 .style-switcher .colors span{
     display: inline-block;
     height: 30px;
-    width: 30x;
+    width: 30px;
     border-radius: 50%;
-    border: 1px solid red;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.style-switcher .colors-1{
+.style-switcher .colours span:hover{
+    transform: scale(1.1);
+}
+
+.style-switcher .colour-1{
     background: #ec1839;
 }
 
-.style-switcher .colors-2{
+.style-switcher .colour-2{
     background: #fa5b0f;
 }
 
-.style-switcher .colors-3{
+.style-switcher .colour-3{
     background: #37b182;
 }
 
-.style-switcher .colors-4{
+.style-switcher .colour-4{
     background: #1854b4;
 }
 
-.style-switcher .colors-5{
+.style-switcher .colour-5{
     background: #f023b2;
 }
