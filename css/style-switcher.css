@@ -6,7 +6,16 @@
     width: 200px;
     border: 1px solid var(--bg-black-50);
     background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
 }
+
+.style-switcher .open{
+    transform: translateX(-25px);
+}
+
 
 .style-switcher .s-icon{
     position: absolute;
@@ -60,4 +69,20 @@
 
 .style-switcher .colors-1{
     background: #ec1839;
+}
+
+.style-switcher .colors-2{
+    background: #fa5b0f;
+}
+
+.style-switcher .colors-3{
+    background: #37b182;
+}
+
+.style-switcher .colors-4{
+    background: #1854b4;
+}
+
+.style-switcher .colors-5{
+    background: #f023b2;
 }
