@@ -594,6 +594,7 @@ h3.my-profession{
 .portfolio .portfolio-heading{
     flex: 0 0 100%;
     max-width: 100%;
+    margin-bottom: 40px;
 }
 
 .portfolio .portfolio-heading h2{
@@ -612,4 +613,52 @@ h3.my-profession{
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+}
+.portfolio .portfolio-item-inner .portfolio-img img{
+    width: 100%;
+    display: block;
+}
+/* contact */
+.contact-title{
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-sub-title{
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+.contact .contact-info-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+}
+
+.contact .contact-info-item .icon{
+    display: inline-block;
+}
+
+.contact .contact-info-item .icon .fa{
+    font-size: 25px;
+    color: var(--skin-color);
+}
+
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 15px;
+}
+
+.contact .contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
 }
