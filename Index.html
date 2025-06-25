@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 <body>
     <div class="main-container">
@@ -411,6 +412,22 @@
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas fa-moon"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="colour-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="colour-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="colour-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="colour-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="colour-5" onclick="setActiveStyle('color-5')"></span>
         </div>
     </div>
     <script src="js/script.js"></script>
