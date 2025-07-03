@@ -17,32 +17,32 @@ const StyleSwitcher: React.FC = () => {
   const colorThemes: ColorTheme[] = [
     {
       name: 'color-1',
-      primary: 'hsl(339, 81%, 66%)',
-      secondary: 'hsl(316, 70%, 68%)',
-      gradient: 'linear-gradient(135deg, hsl(339, 81%, 66%) 0%, hsl(316, 70%, 68%) 100%)'
+      primary: '0 84% 60%',
+      secondary: '348 83% 58%',
+      gradient: 'linear-gradient(135deg, hsl(0, 84%, 60%) 0%, hsl(348, 83%, 58%) 100%)'
     },
     {
       name: 'color-2',
-      primary: 'hsl(202, 86%, 65%)',
-      secondary: 'hsl(210, 79%, 70%)',
+      primary: '202 86% 65%',
+      secondary: '210 79% 70%',
       gradient: 'linear-gradient(135deg, hsl(202, 86%, 65%) 0%, hsl(210, 79%, 70%) 100%)'
     },
     {
       name: 'color-3',
-      primary: 'hsl(142, 69%, 58%)',
-      secondary: 'hsl(158, 64%, 52%)',
+      primary: '142 69% 58%',
+      secondary: '158 64% 52%',
       gradient: 'linear-gradient(135deg, hsl(142, 69%, 58%) 0%, hsl(158, 64%, 52%) 100%)'
     },
     {
       name: 'color-4',
-      primary: 'hsl(45, 100%, 68%)',
-      secondary: 'hsl(35, 100%, 68%)',
+      primary: '45 100% 68%',
+      secondary: '35 100% 68%',
       gradient: 'linear-gradient(135deg, hsl(45, 100%, 68%) 0%, hsl(35, 100%, 68%) 100%)'
     },
     {
       name: 'color-5',
-      primary: 'hsl(16, 100%, 66%)',
-      secondary: 'hsl(28, 100%, 68%)',
+      primary: '16 100% 66%',
+      secondary: '28 100% 68%',
       gradient: 'linear-gradient(135deg, hsl(16, 100%, 66%) 0%, hsl(28, 100%, 68%) 100%)'
     }
   ];
@@ -63,8 +63,10 @@ const StyleSwitcher: React.FC = () => {
   const applyColorTheme = (themeName: string) => {
     const theme = colorThemes.find(t => t.name === themeName);
     if (theme) {
-      document.documentElement.style.setProperty('--color-primary', theme.primary);
-      document.documentElement.style.setProperty('--color-secondary', theme.secondary);
+      // Update Tailwind CSS variables
+      document.documentElement.style.setProperty('--primary', theme.primary);
+      document.documentElement.style.setProperty('--secondary', theme.secondary);
+      // Also keep the custom gradient variable
       document.documentElement.style.setProperty('--gradient-primary', theme.gradient);
     }
   };
@@ -221,7 +223,9 @@ const StyleSwitcher: React.FC = () => {
                 <button
                   onClick={() => {
                     handleThemeChange('color-1');
-                    handleDarkModeToggle();
+                    if (!isDarkMode) {
+                      handleDarkModeToggle();
+                    }
                   }}
                   className="w-full mt-6 px-4 py-2 rounded-xl bg-muted hover:bg-muted/80 transition-colors duration-200 text-sm font-medium"
                 >

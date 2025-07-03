@@ -10,7 +10,7 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 346 77% 49%;
+    --primary: 0 84% 60%;
     --primary-foreground: 355.7 100% 97.3%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -25,9 +25,7 @@
     --ring: 346 77% 49%;
     --radius: 0.5rem;
     
-    /* Custom color theme variables */
-    --color-primary: hsl(339, 81%, 66%);
-    --color-secondary: hsl(316, 70%, 68%);
+    /* Custom gradient variable */
     --gradient-primary: linear-gradient(135deg, hsl(339, 81%, 66%) 0%, hsl(316, 70%, 68%) 100%);
   }
 
@@ -38,7 +36,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 346 77% 49%;
+    --primary: 339 81% 66%;
     --primary-foreground: 355.7 100% 97.3%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -74,7 +72,11 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    background: var(--gradient-primary);
   }
   
   .shadow-glow {
