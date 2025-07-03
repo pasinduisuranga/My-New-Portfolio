@@ -17,9 +17,9 @@ const StyleSwitcher: React.FC = () => {
   const colorThemes: ColorTheme[] = [
     {
       name: 'color-1',
-      primary: '339 81% 66%',
-      secondary: '316 70% 68%',
-      gradient: 'linear-gradient(135deg, hsl(339, 81%, 66%) 0%, hsl(316, 70%, 68%) 100%)'
+      primary: '0 84% 60%',
+      secondary: '348 83% 58%',
+      gradient: 'linear-gradient(135deg, hsl(0, 84%, 60%) 0%, hsl(348, 83%, 58%) 100%)'
     },
     {
       name: 'color-2',
