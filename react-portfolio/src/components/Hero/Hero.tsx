@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail } from 'lucide-react';
+import { Download, Mail, Linkedin, Twitter, Instagram, Youtube, MessageCircle, Github } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
@@ -32,6 +32,17 @@ const Hero: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const downloadCV = () => {
+    // You can replace this with your actual CV file path
+    const cvUrl = '/cv/Pasindu_Isuranga_CV.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Pasindu_Isuranga_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -91,10 +102,70 @@ const Hero: React.FC = () => {
                 Hire Me
               </button>
               
-              <button className="inline-flex items-center gap-2 border border-border px-8 py-3 rounded-full font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105">
+              <button 
+                onClick={downloadCV}
+                className="inline-flex items-center gap-2 border border-border px-8 py-3 rounded-full font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105"
+              >
                 <Download size={20} />
                 Download CV
               </button>
+            </motion.div>
+
+            {/* Social Media Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0 }}
+              className="flex gap-3 flex-wrap"
+            >
+              <a
+                href="https://www.linkedin.com/in/pasindu-isuranaga/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 rounded-full bg-[#0077B5] hover:bg-[#0077B5]/80 transition-colors duration-300"
+              >
+                <Linkedin className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://x.com/Pasidu_isuranga"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 rounded-full bg-[#1DA1F2] hover:bg-[#1DA1F2]/80 transition-colors duration-300"
+              >
+                <Twitter className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://www.instagram.com/pasindu_isuranga_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 rounded-full bg-[#E4405F] hover:bg-[#E4405F]/80 transition-colors duration-300"
+              >
+                <Instagram className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://youtube.com/@SLCode_X"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 rounded-full bg-[#FF0000] hover:bg-[#FF0000]/80 transition-colors duration-300"
+              >
+                <Youtube className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://discord.gg/pasindu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 rounded-full bg-[#7289DA] hover:bg-[#7289DA]/80 transition-colors duration-300"
+              >
+                <MessageCircle className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://github.com/pasinduisuranga"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 rounded-full bg-[#181717] hover:bg-[#181717]/80 transition-colors duration-300"
+              >
+                <Github className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
+              </a>
             </motion.div>
           </motion.div>
 
