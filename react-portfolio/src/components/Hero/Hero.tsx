@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const words = ['Web Developer', 'Software Engineer', 'Tech Enthusiast'];
+  const words = ['Web Developer', 'Software Engineer', 'Frontend Developer', 'React Developer'];
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
