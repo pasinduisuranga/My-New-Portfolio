@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Palette, Smartphone, Globe, Database, Zap } from 'lucide-react';
+import { Code, Palette, Monitor, Globe, Database, Zap } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -10,9 +10,9 @@ const Services: React.FC = () => {
       description: "Building responsive and modern web applications using latest technologies like React, TypeScript, and Node.js."
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Creating cross-platform mobile applications using React Native and Flutter for iOS and Android."
+      icon: Monitor,
+      title: "Frontend Development",
+      description: "Creating modern, responsive user interfaces using React, TypeScript, and CSS frameworks like Tailwind CSS."
     },
     {
       icon: Palette,
