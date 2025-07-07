@@ -51,7 +51,16 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Create mailto link with form data
+    const { name, email, subject, message } = formData;
+    const mailtoLink = `mailto:nanayaktarap93@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Show success message
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -61,7 +70,7 @@ const Contact: React.FC = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 2000);
+    }, 1000);
   };
 
   const containerVariants = {
