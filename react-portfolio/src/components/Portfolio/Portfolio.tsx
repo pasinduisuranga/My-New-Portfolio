@@ -28,11 +28,11 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 3,
-      title: "Mobile Banking App",
-      description: "A secure mobile banking application with biometric authentication",
+      title: "Banking System",
+      description: "A comprehensive web-based banking system with secure transaction management",
       image: "/images/portfolio-3.jpg",
-      category: "mobile",
-      technologies: ["React Native", "TypeScript", "Redux", "Node.js"],
+      category: "web",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
       liveUrl: "#",
       githubUrl: "#"
     },
